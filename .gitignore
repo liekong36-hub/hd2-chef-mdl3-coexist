@@ -1,0 +1,10 @@
+*.bak
+*.tmp
+*.orig
+*.workbuddy*
+.hd2-mod-cli/
+_chef_auto_backup/
+Thumbs.db
+desktop.ini
+.DS_Store
+*.zip
