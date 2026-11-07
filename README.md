@@ -1,9 +1,9 @@
 # HD2 Chef + MDL3 Coexist Pack
 
-> **Status: permission pending.** This is an unofficial, modified build.
-> We have asked the original authors for permission before any public
-> distribution. Until they reply, this repository stays private and no
-> release is published.
+> **Status: permission partly granted.** JFRedist has permitted a modified
+> build of his hand-off addon under conditions that are implemented here.
+> Permission from Th3chef for the Chef Shared Loader core is still pending.
+> This repository stays **private** and no release is published until then.
 
 A free, non-commercial compatibility pack for **Helldivers 2** that lets
 **Chef Shared Loader** and **MDL3** run side by side under
@@ -31,7 +31,8 @@ treat Chef as an ordinary mod while MDL3 remains the selected loader.
 | --- | --- |
 | Game | Helldivers 2 (current build) |
 | MDL3 | 3.0.0-dev.36 – 3.0.0-dev.43 (tested on dev.36) |
-| Chef Shared Loader | 1.5.3 |
+| Chef Shared Loader | 1.5.3 (core resource renamed) |
+| Chef Hand-off for MDL3 | 0.2.6, modified as 0.2.6-lk36.1 |
 | Mod manager | HD2 Mod Quick Deploy 0.17.0 |
 | Menu language | Simplified Chinese, 508+ texts |
 
@@ -52,14 +53,21 @@ Releases; the zip is not committed to the repository itself.
 
 | Work | Author |
 | --- | --- |
-| Chef Shared Loader | Chefbo (Nexus 17760) |
-| Chef Hand-off for MDL3 | JFRedist (Nexus 18398) |
+| Chef Shared Loader | Th3chef (`github.com/Th3chef/Chef-Shared-Loader`), Chefbo on Nexus (17760) |
+| Chef Hand-off for MDL3 0.2.6 | JFRedist (`github.com/JFRedist/HD2-Chef-Handoff-for-MDL3`, Nexus 18398) |
 | Official Simplified Chinese language pack | Nexus 17926 |
 | Translation additions and pack assembly | liekong36 |
 
-Permission requests have been sent to Chefbo and JFRedist. This repository
-will remain private until both replies are received. If either author prefers
-that the modified build is not distributed, it will be withdrawn immediately.
+The hand-off addon is used under the MIT license (Copyright (c) 2026
+JFRedist); its unmodified license text ships as `LICENSE-HANDOFF` in the pack.
+Our build carries its own version (`0.2.6-lk36.1`) and an identifying `from`
+string so its logs cannot be mistaken for the upstream release.
+
+**Please report problems with this pack to liekong36, not to the upstream authors.**
+
+A permission request has been sent to Th3chef for the Chef Shared Loader core
+and translations. This repository stays private until that reply arrives; if
+permission is declined, the pack will be withdrawn immediately.
 
 ## Disclaimer
 
