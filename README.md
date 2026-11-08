@@ -1,5 +1,7 @@
 # HD2 Chef + MDL3 Coexist Pack
 
+[English](README.md) · [简体中文](README.zh-CN.md)
+
 > **Status: both upstream authors have permitted this modified build, with
 > conditions.** It stays online only until one of the official routes below
 > works: Quick Deploy's helper covering MDL3, or MDL3 running under Chef.
