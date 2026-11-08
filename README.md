@@ -1,9 +1,11 @@
 # HD2 Chef + MDL3 Coexist Pack
 
-> **Status: permission partly granted.** JFRedist has permitted a modified
-> build of his hand-off addon under conditions that are implemented here.
-> Permission from Th3chef for the Chef Shared Loader core is still pending.
-> This repository stays **private** and no release is published until then.
+> **Status: both upstream authors have permitted this modified build, with
+> conditions.** It stays online only until one of the official routes below
+> works: Quick Deploy's helper covering MDL3, or MDL3 running under Chef.
+> This is an **unofficial, modified build**. Report problems with the pack to
+> liekong36; forward to the upstream authors only issues that also reproduce
+> on their unmodified release. The pack will be taken down once either route works.
 
 A free, non-commercial compatibility pack for **Helldivers 2** that lets
 **Chef Shared Loader** and **MDL3** run side by side under
@@ -65,9 +67,11 @@ string so its logs cannot be mistaken for the upstream release.
 
 **Please report problems with this pack to liekong36, not to the upstream authors.**
 
-A permission request has been sent to Th3chef for the Chef Shared Loader core
-and translations. This repository stays private until that reply arrives; if
-permission is declined, the pack will be withdrawn immediately.
+Th3chef (Chefbo) has reviewed the diff and permitted the pack to stay up under
+the conditions above. He also confirmed the dead-module case originates on
+MDL3's side: dev.36 starts addons declaring `chef-shared-loader` before the
+hand-off, and the MDL3 author is restoring the rule that MDL3 never starts
+those. Once that lands, our runtime rewrite in the core is no longer needed.
 
 ## Disclaimer
 
@@ -76,3 +80,14 @@ authors. Provided as-is, at your own risk.
 
 **Free and non-commercial.** No paywall, no paid access, no donations or ads
 tied to this pack, and no commercial use of any kind.
+
+## Scope and limitations
+
+- This pack is **for dual-loader setups only** (Chef + MDL3 together).
+- If you only want Chef without MDL3, use the official unmodified Chef Shared
+  Loader release. Quick Deploy recognises it as a loader via its hard-coded
+  resource IDs; our renamed build is deliberately invisible to that check and
+  cannot be chosen as a loader.
+- Do not enable the official Chef entry and this pack at the same time.
+- The Simplified Chinese language packs work on their own and can be installed
+  separately in either setup.
