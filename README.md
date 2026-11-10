@@ -34,7 +34,7 @@ treat Chef as an ordinary mod while MDL3 remains the selected loader.
 | Component | Version |
 | --- | --- |
 | Game | Helldivers 2 (current build) |
-| MDL3 | 3.0.0-dev.36 – 3.0.0-dev.43 (tested on dev.36) |
+| MDL3 | 3.0.0-dev.33 – 3.0.0-dev.47 (tested on dev.33, dev.36 and dev.47) |
 | Chef Shared Loader | 1.5.3 (core resource renamed) |
 | Chef Hand-off for MDL3 | 0.2.6, modified as 0.2.6-lk36.1 |
 | Mod manager | HD2 Mod Quick Deploy 0.17.0 |

@@ -1,36 +1,31 @@
-# 更新日志
+# Changelog
 
-按版本正序列出最终保留的有效修改，每条一句话；中途被推翻并已回滚的试验
-（改 boot 资源名、抹 loader 内容标记、误判 chunk 传参等）不计入。
+[English](CHANGELOG.md) · [简体中文](CHANGELOG.zh-CN.md)
 
-## v1.0 — 2026-11-05（初版）
+> Note: since v1.3 the public release contains **no language packs**.
+> Translation-related entries in v1.0 - v1.2 are historical context, not part
+> of the current package. Experiments that were reverted are not listed.
 
-- 让 MDL3 留在最高补丁层、Chef 排在它下面，由 Hand-off 在启动约 6 秒后交接，实现双加载器共存。
-- 把 Chef 核心资源从 `core_1` 改名为 `core_2`，使 QD 不再把它判定为 loader 而排除。
-- 把 Chef 核心、Hand-off、官方简中包、补充包合成一个 QD 条目，Deploy 后不再依赖手工插层脚本。
-- 逆向 Stingray 补丁包格式并自建 `-- HD2-Lang` 补充包，补齐 300 条加载器菜单翻译。
-- 补译 HUDdle 的 `minimal_hud_lang.txt` 共 238 行。
+## v1.0 - 2026-11-05 (first release)
 
-## v1.0.1 — 2026-11-06（兼容与汉化补全）
+- MDL3 stays on the highest patch, Chef sits below it, and the hand-off addon starts Chef about 6 seconds after launch, so both loaders coexist.
+- Chef's core resource is renamed so the manager no longer classifies it as a loader and excludes it.
+- Chef's core and the hand-off addon are bundled into one manager entry, so deploying no longer needs a manual script.
+- The patch bundle format was worked out and a data-only language pack mechanism was established for later translations.
 
-- 在 Chef 核心内置运行时源码改写，自动修复被 MDL3 抢先启动而留下残缓存的 Chef addon，模组用原版即可。
-- 把补充包从 300 条扩到 430 条，三个语言包合并后简体中文达 508 texts。
-- 把 Hand-off 的崩溃保护降级为「警告后重试」，解决重进游戏必须删 `chef_handoff_state.txt` 的问题。
+## v1.1 - 2026-11-07 (upgrade and distribution)
 
-## v1.1 — 2026-11-07（升级与分发）
+- The core is upgraded to Chef Shared Loader 1.5.3, with the core rename and the built-in compatibility step migrated.
+- The manifest Guid and name are kept unchanged, so the manager's Replace updates the pack without losing load order or switches.
+- Compatibility with MDL3 3.0.0-dev.33 - dev.47 is established and tested on dev.33, dev.36 and dev.47.
 
-- 核心升级到 Chef Shared Loader 1.5.3，并重做 `core_2` 改名与内置兼容逻辑的迁移。
-- 保持 manifest 的 Guid 与 Name 不变，支持用 QD 的 Replace 直接更新而不丢顺序与开关。
-- 明确兼容 MDL3 3.0.0-dev.36 ~ dev.43 并在 dev.36 上实测通过，MDL3 仍是独立 loader 且不含在包内。
-- 补上 1.5.3 新增的 1 条文本，补充包达 431 条。
+## v1.2 - 2026-11-07 (hand-off reworked under upstream permission)
 
-## v1.2 — 2026-11-07（按上游许可重做 Hand-off）
+- The hand-off addon is rebuilt on JFRedist's official 0.2.6 release, with its own version string and identifying log text.
+- The unmodified MIT license and copyright line are shipped with the pack, together with an unofficial-build notice, an upstream link and a clear bug-report owner.
 
-- 改用 JFRedist 官方发布的 Chef Hand-off for MDL3 0.2.6，撤回上一版「每次未完成交接都重试」的加固（作者指出会让崩溃在每次启动复现）。
-- 按作者要求给交接 addon 自有版本号 `0.2.6-lk36.1` 与带 liekong36 的 `from` 标识，避免日志被误认成上游发布。
-- 随包附上原样 MIT 许可与版权行（`LICENSE-HANDOFF`），并补上非官方声明、上游链接与「问题反馈给 liekong36」。
+## v1.3 - 2026-11-08 (public release)
 
-## v1.3 — 2026-11-08（公开分发版：移除全部中文语言包）
-
-- 移除官方简体中文语言包 17926（作者 MCTimeRL，其权限页禁止把该文件上传到其他站点）与自研补充包，公开版不再附带任何中文文件。
-- 汉化仅保留在本机自用配置中；本机仍使用 v1.2，不受影响。
+- The public release keeps only two patch layers (Chef core and hand-off addon); all Chinese language packs, both third-party and our own, are removed.
+- Bilingual project documentation is added, explaining that language packs must be installed separately and that same-named languages merge automatically.
+- The release is clearly marked as an unofficial modified build, with bug reports routed to liekong36 and a take-down condition once either official compatibility route works.
