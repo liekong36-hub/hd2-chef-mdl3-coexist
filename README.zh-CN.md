@@ -31,8 +31,8 @@ Chef 当作普通模组，而 MDL3 仍是选定的加载器。
 | 组成部分 | 版本 |
 | --- | --- |
 | 游戏 | 地狱潜者2（当前版本） |
-| MDL3 | 3.0.0-dev.33 – 3.0.0-dev.47（dev.33 / dev.36 / dev.47 实测） |
-| Chef Shared Loader | 1.5.3（核心资源已改名） |
+| MDL3 | 3.0.0-dev.33 – 3.0.0-dev.52（dev.33 / dev.36 / dev.47 / dev.52 实测） |
+| Chef Shared Loader | 1.5.4（核心资源已改名） |
 | MDL3 的 Chef 交接 | 0.2.6，修改版 0.2.6-lk36.1 |
 | 模组管理器 | HD2 Mod Quick Deploy 0.17.0 |
 | 语言包 | 本构建不包含 |

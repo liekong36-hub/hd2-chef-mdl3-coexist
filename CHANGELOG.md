@@ -17,7 +17,7 @@
 
 - The core is upgraded to Chef Shared Loader 1.5.3, with the core rename and the built-in compatibility step migrated.
 - The manifest Guid and name are kept unchanged, so the manager's Replace updates the pack without losing load order or switches.
-- Compatibility with MDL3 3.0.0-dev.33 - dev.47 is established and tested on dev.33, dev.36 and dev.47.
+- Compatibility with MDL3 3.0.0-dev.33 - dev.52 is established and tested on dev.33, dev.36, dev.47 and dev.52.
 
 ## v1.2 - 2026-11-07 (hand-off reworked under upstream permission)
 
@@ -29,3 +29,7 @@
 - The public release keeps only two patch layers (Chef core and hand-off addon); all Chinese language packs, both third-party and our own, are removed.
 - Bilingual project documentation is added, explaining that language packs must be installed separately and that same-named languages merge automatically.
 - The release is clearly marked as an unofficial modified build, with bug reports routed to liekong36 and a take-down condition once either official compatibility route works.
+
+## v1.4 - 2026-11-11
+
+- Core upgraded to Chef Shared Loader 1.5.4, with the core_2 rename and the built-in compatibility step migrated; compatible with MDL3 dev.33 - dev.52.
